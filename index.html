@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="styles/style.css" rel="stylesheet">
+
+
+  </head>
+
+
+  <body>
+
+
+
+
+
+        <div class="tiles-panel" id="tiles-panel">
+
+
+          <div class="tiles-items" id="tiles-items">
+          </div>
+
+          <div class="tiles-panel-buttons">
+
+          <div class="file-upload">
+            <input class="hidden file-upload-input" type="file" name="AddTile[]" id="AddTile" multiple />
+            <button class="hidden" id="add-tiles">Add</button>
+          </div>
+
+          <button class="hidden" id="clear-tiles">Clear</button>
+          </div>
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+      <div class="working-area">
+        <div class="viewport-panel" id="viewport-panel">
+          <canvas id="viewport-canvas">
+          </canvas>
+
+
+        </div>
+
+
+
+        <div class="settings-panel" id="settings-panel">
+
+          <h1>Tiles</h1>
+
+
+
+          <label for="tile-width">
+            Width 
+            <input type="number" id="tile-width" value=128>
+          </label>
+
+          <label for="tile-height">
+            Height 
+            <input type="number" id="tile-height" value=128>
+          </label>
+
+          <div class="buttons-group">
+          <button id="increase-resolution"><strong>+</strong></button>
+          <button id="decrease-resolution"><strong>-</strong></button>
+          </div>
+
+
+          <label for="use-square" class="input-checkbox">
+            <input type="checkbox" id="use-square" checked />
+            Use Square
+          </label>
+
+
+
+          <!-- <h1>Layout</h1> -->
+          <!-- <select id="layout-select"> -->
+          <!--   <option value="3x3-minimal">3x3 (Minimal)</option> -->
+          <!--   <option value="3x3">3x3</option> -->
+          <!--   <option value="2x2">2x2</option> -->
+          <!--   <option value="import">Import</option> -->
+          <!--   <option value="custom">Custom</option> -->
+          <!-- </select> -->
+
+            <!-- <label for="custom-grid" class="input-checkbox"> -->
+            <!--   <input type="checkbox" id="custom-grid" checked /> -->
+            <!--   Use Custom Grid -->
+            <!-- </label> -->
+
+          <label class="hidden" for="tile-column">
+            Column
+            <input type="number" id="tile-column" value=12>
+          </label>
+
+          <label for="tile-row" class="hidden">
+            Row
+            <input type="number" id="tile-row" value=4>
+          </label>
+
+
+
+          <h1>Overlay</h1>
+
+          <label for="overlay-color" class="input-color">
+            <input type="color" id="overlay-color" value="#000000"/>
+            &nbsp;&nbsp;Overlay Color
+          </label>
+
+
+          <label for="index-show" class="input-checkbox">
+            <input type="checkbox" id="index-show" />
+            Show Index
+          </label>
+
+          <label for="cell-show" class="input-checkbox">
+            <input type="checkbox" id="cell-show" />
+            Show Cell
+          </label>
+
+          <label for="grid-show" class="input-checkbox">
+            <input type="checkbox" id="grid-show" />
+            Show Grid
+          </label>
+
+          <label for="grid-thickness">
+            Grid Thickness
+            <input type="number" id="grid-thickness" value=1 />
+          </label>
+
+
+          <h1>Viewport</h1>
+
+          <label for="center-viewport" class="input-checkbox">
+            <input type="checkbox" id="center-viewport" checked/>
+            Center Viewport
+          </label>
+
+          <label for="image-fit" class="input-checkbox">
+            <input type="checkbox" id="image-fit" checked/>
+            Fit Image
+          </label>
+
+
+          <label for="background-color" class="input-color">
+            <input type="color" id="background-color" value="#FFFFFF"/>
+            &nbsp;&nbsp;Background Color
+          </label>
+
+          <h1>Panels</h1>
+          <label for="tiles-panel-show" class="input-checkbox">
+            <input type="checkbox" id="tiles-panel-show" checked />
+            Show Image Source
+          </label>
+
+          <label for="sliced-tiles-panel-show" class="input-checkbox">
+            <input type="checkbox" id="sliced-tiles-panel-show" checked />
+            Show Sliced Generated Tiled
+          </label>
+
+
+          <div class="buttons-group">
+          <button id="refresh">Refresh</button>
+          </div>
+
+        </div>
+
+      </div>
+
+
+          <div class="sliced-tiles" id="sliced-tiles-panel">
+          </div>
+
+
+
+
+  
+    <script src="scripts/interface.js"></script>
+
+
+
+  </body>
+</html>
